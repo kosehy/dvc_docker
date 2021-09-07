@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>DVC Plot</title>
+    <script src="https://cdn.jsdelivr.net/npm/vega@5.20.2"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.1.0"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.18.2"></script>
+</head>
+<body>
+    <div id = "plot0"></div>
+<script type = "text/javascript">
+    var spec = {
+    "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
+    "data": {
+        "values": [
+    {
+        "precision": 0.021473008227975116,
+        "recall": 1.0,
+        "rev": "workspace",
+        "threshold": 0.0
+    },
+    {
+        "precision": 0.07025089605734768,
+        "recall": 0.9158878504672897,
+        "rev": "workspace",
+        "threshold": 0.02
+    },
+    {
+        "precision": 0.1504,
+        "recall": 0.8785046728971962,
+        "rev": "workspace",
+        "threshold": 0.04
+    },
+    {
+        "precision": 0.25069637883008355,
+        "recall": 0.8411214953271028,
+        "rev": "workspace",
+        "threshold": 0.06
+    },
+    {
+        "precision": 0.3449612403100775,
+        "recall": 0.8317757009345794,
+        "rev": "workspace",
+        "threshold": 0.08
+    },
+    {
+        "precision": 0.41379310344827586,
+        "recall": 0.7850467289719626,
+        "rev": "workspace",
+        "threshold": 0.1
+    },
+    {
+        "precision": 0.47953216374269003,
+        "recall": 0.7663551401869159,
+        "rev": "workspace",
+        "threshold": 0.12
+    },
+    {
+        "precision": 0.503448275862069,
+        "recall": 0.6822429906542056,
+        "rev": "workspace",
+        "threshold": 0.14
+    },
+    {
+        "precision": 0.5433070866141733,
+        "recall": 0.6448598130841121,
+        "rev": "workspace",
+        "threshold": 0.16
+    },
+    {
+        "precision": 0.584070796460177,
+        "recall": 0.616822429906542,
+        "rev": "workspace",
+        "threshold": 0.18
+    },
+    {
+        "precision": 0.625,
+        "recall": 0.5607476635514018,
+        "rev": "workspace",
+        "threshold": 0.2
+    },
+    {
+        "precision": 0.631578947368421,
+        "recall": 0.5607476635514018,
+        "rev": "workspace",
+        "threshold": 0.22
+    },
+    {
+        "precision": 0.6162790697674418,
+        "recall": 0.4953271028037383,
+        "rev": "workspace",
+        "threshold": 0.24
+    },
+    {
+        "precision": 0.618421052631579,
+        "recall": 0.4392523364485981,
+        "rev": "workspace",
+        "threshold": 0.26
+    },
+    {
+        "precision": 0.6197183098591549,
+        "recall": 0.411214953271028,
+        "rev": "workspace",
+        "threshold": 0.28
+    },
+    {
+        "precision": 0.6440677966101694,
+        "recall": 0.35514018691588783,
+        "rev": "workspace",
+        "threshold": 0.3
+    },
+    {
+        "precision": 0.6666666666666666,
+        "recall": 0.29906542056074764,
+        "rev": "workspace",
+        "threshold": 0.32
+    },
+    {
+        "precision": 0.6976744186046512,
+        "recall": 0.2803738317757009,
+        "rev": "workspace",
+        "threshold": 0.34
+    },
+    {
+        "precision": 0.75,
+        "recall": 0.2523364485981308,
+        "rev": "workspace",
+        "threshold": 0.36
+    },
+    {
+        "precision": 0.8148148148148148,
+        "recall": 0.205607476635514,
+        "rev": "workspace",
+        "threshold": 0.38
+    },
+    {
+        "precision": 0.8333333333333334,
+        "recall": 0.18691588785046728,
+        "rev": "workspace",
+        "threshold": 0.4
+    },
+    {
+        "precision": 0.9,
+        "recall": 0.16822429906542055,
+        "rev": "workspace",
+        "threshold": 0.42
+    },
+    {
+        "precision": 0.8571428571428571,
+        "recall": 0.11214953271028037,
+        "rev": "workspace",
+        "threshold": 0.44
+    },
+    {
+        "precision": 0.9,
+        "recall": 0.08411214953271028,
+        "rev": "workspace",
+        "threshold": 0.46
+    },
+    {
+        "precision": 0.875,
+        "recall": 0.06542056074766354,
+        "rev": "workspace",
+        "threshold": 0.48
+    },
+    {
+        "precision": 1.0,
+        "recall": 0.037383177570093455,
+        "rev": "workspace",
+        "threshold": 0.5
+    },
+    {
+        "precision": 1.0,
+        "recall": 0.028037383177570093,
+        "rev": "workspace",
+        "threshold": 0.52
+    },
+    {
+        "precision": 1.0,
+        "recall": 0.018691588785046728,
+        "rev": "workspace",
+        "threshold": 0.54
+    },
+    {
+        "precision": 1.0,
+        "recall": 0.009345794392523364,
+        "rev": "workspace",
+        "threshold": 0.6
+    }
+]
+    },
+    "title": "",
+    "width": 300,
+    "height": 300,
+    "mark": {
+        "type": "line"
+    },
+    "encoding": {
+        "x": {
+            "field": "recall",
+            "type": "quantitative",
+            "title": "recall"
+        },
+        "y": {
+            "field": "precision",
+            "type": "quantitative",
+            "title": "precision",
+            "scale": {
+                "zero": false
+            }
+        },
+        "color": {
+            "field": "rev",
+            "type": "nominal"
+        }
+    }
+}
+;
+    vegaEmbed('#plot0', spec);
+</script>
+<div id = "plot1"></div>
+<script type = "text/javascript">
+    var spec = {
+    "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
+    "data": {
+        "values": [
+    {
+        "fpr": 0.0,
+        "rev": "workspace",
+        "threshold": 1.6,
+        "tpr": 0.0
+    },
+    {
+        "fpr": 0.0,
+        "rev": "workspace",
+        "threshold": 0.6,
+        "tpr": 0.009345794392523364
+    },
+    {
+        "fpr": 0.0,
+        "rev": "workspace",
+        "threshold": 0.5,
+        "tpr": 0.037383177570093455
+    },
+    {
+        "fpr": 0.00020508613617719443,
+        "rev": "workspace",
+        "threshold": 0.48,
+        "tpr": 0.06542056074766354
+    },
+    {
+        "fpr": 0.00020508613617719443,
+        "rev": "workspace",
+        "threshold": 0.46,
+        "tpr": 0.08411214953271028
+    },
+    {
+        "fpr": 0.00041017227235438887,
+        "rev": "workspace",
+        "threshold": 0.44,
+        "tpr": 0.11214953271028037
+    },
+    {
+        "fpr": 0.00041017227235438887,
+        "rev": "workspace",
+        "threshold": 0.42,
+        "tpr": 0.16822429906542055
+    },
+    {
+        "fpr": 0.0008203445447087777,
+        "rev": "workspace",
+        "threshold": 0.4,
+        "tpr": 0.18691588785046728
+    },
+    {
+        "fpr": 0.001025430680885972,
+        "rev": "workspace",
+        "threshold": 0.38,
+        "tpr": 0.205607476635514
+    },
+    {
+        "fpr": 0.0018457752255947497,
+        "rev": "workspace",
+        "threshold": 0.36,
+        "tpr": 0.2523364485981308
+    },
+    {
+        "fpr": 0.0026661197703035273,
+        "rev": "workspace",
+        "threshold": 0.34,
+        "tpr": 0.2803738317757009
+    },
+    {
+        "fpr": 0.003281378178835111,
+        "rev": "workspace",
+        "threshold": 0.32,
+        "tpr": 0.29906542056074764
+    },
+    {
+        "fpr": 0.004306808859721083,
+        "rev": "workspace",
+        "threshold": 0.3,
+        "tpr": 0.35514018691588783
+    },
+    {
+        "fpr": 0.005537325676784249,
+        "rev": "workspace",
+        "threshold": 0.28,
+        "tpr": 0.411214953271028
+    },
+    {
+        "fpr": 0.005947497949138638,
+        "rev": "workspace",
+        "threshold": 0.26,
+        "tpr": 0.4392523364485981
+    },
+    {
+        "fpr": 0.006767842493847416,
+        "rev": "workspace",
+        "threshold": 0.24,
+        "tpr": 0.4953271028037383
+    },
+    {
+        "fpr": 0.007178014766201805,
+        "rev": "workspace",
+        "threshold": 0.22,
+        "tpr": 0.5607476635514018
+    },
+    {
+        "fpr": 0.007383100902378999,
+        "rev": "workspace",
+        "threshold": 0.2,
+        "tpr": 0.5607476635514018
+    },
+    {
+        "fpr": 0.009639048400328138,
+        "rev": "workspace",
+        "threshold": 0.18,
+        "tpr": 0.616822429906542
+    },
+    {
+        "fpr": 0.011894995898277276,
+        "rev": "workspace",
+        "threshold": 0.16,
+        "tpr": 0.6448598130841121
+    },
+    {
+        "fpr": 0.014766201804757998,
+        "rev": "workspace",
+        "threshold": 0.14,
+        "tpr": 0.6822429906542056
+    },
+    {
+        "fpr": 0.018252666119770302,
+        "rev": "workspace",
+        "threshold": 0.12,
+        "tpr": 0.7663551401869159
+    },
+    {
+        "fpr": 0.024405250205086135,
+        "rev": "workspace",
+        "threshold": 0.1,
+        "tpr": 0.7850467289719626
+    },
+    {
+        "fpr": 0.03465955701394586,
+        "rev": "workspace",
+        "threshold": 0.08,
+        "tpr": 0.8317757009345794
+    },
+    {
+        "fpr": 0.0551681706316653,
+        "rev": "workspace",
+        "threshold": 0.06,
+        "tpr": 0.8411214953271028
+    },
+    {
+        "fpr": 0.10890073831009024,
+        "rev": "workspace",
+        "threshold": 0.04,
+        "tpr": 0.8785046728971962
+    },
+    {
+        "fpr": 0.26599671862182117,
+        "rev": "workspace",
+        "threshold": 0.02,
+        "tpr": 0.9158878504672897
+    },
+    {
+        "fpr": 1.0,
+        "rev": "workspace",
+        "threshold": 0.0,
+        "tpr": 1.0
+    }
+]
+    },
+    "title": "",
+    "width": 300,
+    "height": 300,
+    "mark": {
+        "type": "line"
+    },
+    "encoding": {
+        "x": {
+            "field": "fpr",
+            "type": "quantitative",
+            "title": "fpr"
+        },
+        "y": {
+            "field": "tpr",
+            "type": "quantitative",
+            "title": "tpr",
+            "scale": {
+                "zero": false
+            }
+        },
+        "color": {
+            "field": "rev",
+            "type": "nominal"
+        }
+    }
+}
+;
+    vegaEmbed('#plot1', spec);
+</script>
+</body>
+</html>
